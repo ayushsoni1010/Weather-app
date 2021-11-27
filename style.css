@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.weather-app-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 300px;
+    height: 500px;
+    background-color: #292929;
+    box-shadow: 10px 10px #ccc, 10px 10px #ccc;
+}
+
+.earth-icon{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.earth-image{
+    width: 30%;
+}
+
+.search-input-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+.search-input{
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    border:none;
+}
+
+.search-btn{
+    border:  none;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+}
