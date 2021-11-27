@@ -1,48 +1,140 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
 }
 
-.weather-app-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 300px;
-    height: 500px;
-    background-color: #292929;
-    box-shadow: 10px 10px #ccc, 10px 10px #ccc;
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  color: white;
+}
+.weather-app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 5rem;
+  /* width: 300px; */
+  min-height: 500px;
+  background-color: #292929;
+  box-shadow: 10px 10px #ccc, 10px 10px #ccc;
 }
 
-.earth-icon{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.earth-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
-.earth-image{
-    width: 30%;
-}
-
-.search-input-wrapper{
-    display: flex;
-    flex-direction: row;
-    gap: 2px;
+.earth-image {
+  width: 30%;
 }
 
-.search-input{
-    width: 90%;
-    height: 40px;
-    border-radius: 5px;
-    border:none;
+.search-input-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  /* gap: 2px; */
+  width: 100%;
 }
 
-.search-btn{
-    border:  none;
-    border-radius: 5px;
-    width: 40px;
-    height: 40px;
+.search-input {
+  width: 70%;
+  padding: 1rem 2rem;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+}
+
+.search-btn {
+  border: none;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+}
+
+.weather-data {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5rem 0;
+}
+.data-left,
+.data-right {
+  height: auto;
+  width: 100%;
+}
+.data-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+.left-img img {
+  width: 15rem;
+}
+.data-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+.data-right p {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.data-right p span {
+  font-weight: 400;
+  margin-left: 2rem;
+}
+.data-temp h2 {
+  font-size: 5rem;
+  font-weight: 400;
+}
+.data-main p {
+  font-size: 4rem;
+}
+.data-city p {
+  font-size: 4rem;
+}
+.error {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.spinner {
+  position: absolute;
+  z-index: 3;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.spinner img {
+  height: 4rem;
+  width: 4rem;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
