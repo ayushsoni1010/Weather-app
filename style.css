@@ -5,38 +5,32 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px */
-}
 
 body {
   font-family: "Montserrat", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem;
-  color: white;
+  color: black;
+  background-color: #292929;
 }
 .weather-app-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  padding: 5rem;
-  /* width: 300px; */
-  min-height: 500px;
-  background-color: #292929;
-  box-shadow: 10px 10px #ccc, 10px 10px #ccc;
+  width: 50%;
+  height: 500px;
+  margin-top: 7%;
+  margin-left: 25%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px #ccc;
 }
 
 .earth-icon {
-  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
+  margin-top: -70px;
+  width: 300px;
+  height: 300px;
 }
 .earth-image {
   width: 30%;
@@ -46,32 +40,40 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 2rem;
-  /* gap: 2px; */
+  margin-top: -70px;
   width: 100%;
 }
 
 .search-input {
   width: 70%;
-  padding: 1rem 2rem;
   height: 40px;
-  border-radius: 5px;
-  border: none;
+  border-radius: 5px 0px 0px 5px !important;
+  background-color: #e4e4e4;
+}
+
+.search-input :focus{
+  outline: none;
 }
 
 .search-btn {
-  border: none;
-  border-radius: 5px;
+  border: 1px solid grey;
+  border-radius: 0px 5px 5px 0px !important;
+  background-color: #e4e4e4;
   width: 40px;
   height: 40px;
+}
+
+.search-btn :focus{
+  outline: none;
 }
 
 .weather-data {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 5rem 0;
+  margin-top: 3rem;
 }
+
 .data-left,
 .data-right {
   height: auto;
@@ -81,10 +83,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
 }
 .left-img img {
-  width: 15rem;
+  width: 5rem;
 }
 .data-right {
   display: flex;
@@ -93,22 +95,26 @@ body {
   gap: 2rem;
 }
 .data-right p {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 .data-right p span {
   font-weight: 400;
+  font-size: 1rem;
   margin-left: 2rem;
 }
 .data-temp h2 {
-  font-size: 5rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 800;
 }
 .data-main p {
-  font-size: 4rem;
+  font-size: 1rem;
+  font-weight: 600;
 }
 .data-city p {
-  font-size: 4rem;
+  font-size: 1rem;
+  font-weight: 600;
+
 }
 .error {
   text-align: center;
